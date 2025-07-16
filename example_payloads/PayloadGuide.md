@@ -95,7 +95,6 @@ Displays the order book to the console with a specified depth.
 | Field   | Type     | Description                         |
 |---------|----------|-------------------------------------|
 | RANGE   | integer  | Number of levels to display         |
-| LOG     | string   | `"OUT"` or `"NONE"`                 |
 
 ---
 
