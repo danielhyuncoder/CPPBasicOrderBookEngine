@@ -68,7 +68,7 @@ OBI = (TotalBuyQty - TotalSellQty) / (TotalBuyQty + TotalSellQty)
 
 ---
 
-## How to Use
+## How to Use (From 
 
 1. **Include the engine in your project:**
 
@@ -77,31 +77,8 @@ OBI = (TotalBuyQty - TotalSellQty) / (TotalBuyQty + TotalSellQty)
 
 2. **Instantiate the order book:**
 
-```cpp
-MultiLevelOrderBook::OrderBook<double, long long, int, int, double> book(MultiLevelOrderBook::Level::Level3);
-```
+* Refer to PayloadGuide.mb at the "example_payloads" folder.
 
-3. **Place Orders:**
-
-```cpp
-book.LimitOrder(OrderDirection::BUY, 100.0, 1, 50.5, 10001, LogType::OUT);
-book.MarketOrder(OrderDirection::SELL, 50.0, LogType::OUT);
-```
-
-4. **Modify Orders:**
-
-```cpp
-book.ModifyOrder(orderId, ModificationType::QUANTITY, newQty, LogType::OUT);
-book.ModifyOrder(orderId, LogType::OUT); // KILL
-```
-
-5. **View Order Book:**
-
-```cpp
-book.DisplayBook(10);  // Display top 10 from both sides
-```
-
----
 
 ## Logging
 
@@ -122,22 +99,7 @@ Order types and statuses are printed using `OrderTypeLog`, `OrderStatusLog`, and
 
 ---
 
-## Sample Enum Definitions (ControlEnums.hpp)
 
-```cpp
-enum class OrderType { LIMIT, MARKET };
-enum class OrderStatus { OPEN, PARTIAL, FILLED };
-enum class OrderDirection { BUY, SELL };
-enum class ModificationType { KILL, QUANTITY, PRICE };
-enum class Level { Level1, Level2, Level3 };
-enum class LogType { NONE, OUT };
-
-const std::string OrderTypeLog[] = {"LIMIT", "MARKET"};
-const std::string OrderStatusLog[] = {"OPEN", "PARTIAL", "FILLED"};
-const std::string OrderDirectionLog[] = {"BUY", "SELL"};
-```
-
----
 
 ## License
 
