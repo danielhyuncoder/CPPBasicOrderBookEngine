@@ -94,7 +94,7 @@ Displays the order book to the console with a specified depth.
 
 | Field   | Type     | Description                         |
 |---------|----------|-------------------------------------|
-| RANGE   | integer  | Number of levels to display         |
+| RANGE   | integer  | Number of order from both the bid/ask to display         |
 
 ---
 
