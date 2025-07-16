@@ -1,4 +1,4 @@
-# MultiLevelOrderBook
+# CPPBasicOrderBookEngine
 
 A high-performance, dependency-free C++ order book engine implementation designed for handling both limit and market orders, order modifications, and level-based order book data display (Level 1, 2, 3). It is completely self-contained except for using the lightweight [json.hpp](https://github.com/nlohmann/json) library for any optional JSON functionality.
 
