@@ -7,7 +7,7 @@ using namespace MultiLevelOrderBook;
 using json = nlohmann::json;
 
 int main() {
-  std::ifstream inFile("./data/config.json");
+  std::ifstream inFile("../data/config.json");
   if (!inFile) {
       std::cerr << "Could not open the config file!\n";
       return 1;
@@ -17,7 +17,7 @@ int main() {
   inFile.close();
   int level = j["Level"];
   OrderBook<long double, long double, long double, long double, long double> orderbook(level==1?Level::Level1 : (level==2?Level::Level2 : Level::Level3)); // Could define custom datatypes
-  std::ifstream orderFile("./data/orders.json");
+  std::ifstream orderFile("../data/orders.json");
   if (!orderFile) {
       std::cerr << "Could not open the orders file!\n";
       return 1;
