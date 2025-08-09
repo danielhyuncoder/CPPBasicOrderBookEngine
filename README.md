@@ -70,14 +70,19 @@ OBI = (TotalBuyQty - TotalSellQty) / (TotalBuyQty + TotalSellQty)
 
 ## How to Use (From 
 
-1. **Include the engine in your project:**
+1. **Edit Orders.json**
 
-   * `#include "OrderBook.hpp"`
-   * `#include "ControlEnums.hpp"`
+   * Add different orders as required. Refer to PayloadGuide.mb for documentation.
 
-2. **Instantiate the order book:**
+2. **Run main.cpp using g++**
 
-* Refer to PayloadGuide.mb at the "example_payloads" folder.
+* g++ main.cpp -o main.exe
+* Run main.exe
+
+2. **Build docker image and run container**
+* Compile a docker image based on the root project directory.
+* Run a container based on the image.
+
 
 
 ## Logging
