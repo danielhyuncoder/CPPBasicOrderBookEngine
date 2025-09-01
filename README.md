@@ -76,7 +76,7 @@ OBI = (TotalBuyQty - TotalSellQty) / (TotalBuyQty + TotalSellQty)
 
 2. **Run main.cpp using g++**
 
-* g++ src/main.cpp -o main.exe
+* g++ main.cpp -o main.exe
 * Run main.exe
 
 2. **Build docker image and run container**
